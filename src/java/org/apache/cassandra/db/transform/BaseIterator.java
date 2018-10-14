@@ -139,7 +139,6 @@ abstract class BaseIterator<V, I extends CloseableIterator<? extends V>, O exten
             // since we're truncating our transformation stack to only those occurring after the extend transformation
             // we have to run any prior runOnClose methods
             maybeFail(runOnClose(holder.length));
-            refill(prefix, holder, i);
 
             if (next != null || input.hasNext())
                 return true;
